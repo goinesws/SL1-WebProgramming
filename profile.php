@@ -86,6 +86,14 @@ session_start();
             <td>Kode Pos</td>
             <td><strong><?= isset($_SESSION['KodePos']) ? $_SESSION['KodePos'] : "" ?></td>
             <td>Foto Profil</td>
+            <td rowspan="4"><img src="foto/<?= isset($_SESSION['FotoProfil'])? $_SESSION['FotoProfil'] :"" ?>"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
@@ -94,7 +102,15 @@ session_start();
             <td></td>
             <td></td>
             <td></td>
-            <td><img src="foto/<?= isset($_SESSION['FotoProfil'])? $_SESSION['FotoProfil'] :"" ?>"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>    
 </body>
