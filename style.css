@@ -1,0 +1,107 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body#welcome{
+    background-color: #E5EDEB;
+}
+
+body#login-bg{
+    background-color: #fbfdac;
+}
+
+body#register-bg{
+    background-color: #c2f0f7;
+}
+
+body#home-bg{
+    background-color: #cad1ff;
+    margin:0px;
+}
+.title{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 5%;
+}
+
+.headline{
+    text-align: center;
+    font-size: 40px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.login{
+    width: 200px;
+    height: 100px;
+    background-color: #99d6ed;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.register{
+    width: 200px;
+    height: 100px;
+    background-color: #c7ed9c;
+}
+
+
+
+.loginform{
+    padding: 5% 5% 5% 10%;
+    background-color: #ace6fd;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+input{
+    background-color: #f3f3f3;
+    border: none;
+    padding: 5px;
+    margin: 15px 10px 5px 5px;
+}
+
+input[type=submit]{
+    border:none;
+    background-color: #adf59f;
+    width: 75px;
+}
+
+.kembali{
+    border: none;
+    width: 75px;
+    background-color: #fdd7ac;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    padding: 5.5px;
+}
+
+
+.regisform{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.header{
+    background-color:#f9ffca; 
+    display: flex; 
+    justify-content: space-around; 
+    height: 40px; 
+    line-height: 40px;
+}
+
