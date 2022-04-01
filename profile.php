@@ -1,5 +1,8 @@
 <?php
-session_start();
+    session_start();
+    include('config.php');
+    $result = mysqli_query($connection, "SELECT * FROM profile WHERE Username = '{$_SESSION['Username']}'");
+    $data = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +30,7 @@ session_start();
         }
         p{
             font-size: 30px;
-            line-height: 500px;
+            /* line-height: 500px; */
             text-align: center;
         }
         .directory a{
@@ -58,35 +61,38 @@ session_start();
 
     <table class="data">
         <tr>
+            <td><a href="editProfile.php" class="kembali">Edit Profile</a></td>
+        </tr>
+        <tr>
             <td>Nama Depan</td>
-            <td><strong><?= isset($_SESSION['NamaDepan']) ? $_SESSION['NamaDepan'] : "" ?></td>
+            <td><strong><?= $data['NamaDepan'] ?></td>
             <td>Nama Tengah</td>
-            <td><strong><?= isset($_SESSION['NamaTengah']) ? $_SESSION['NamaTengah'] : "" ?></td>
+            <td><strong><?= $data['NamaTengah'] ?></td>
             <td>Nama Belakang</td>
-            <td><strong><?= isset($_SESSION['NamaBelakang']) ? $_SESSION['NamaBelakang'] : "" ?></td>
+            <td><strong><?= $data['NamaBelakang'] ?></td>
         </tr>
         <tr>
             <td>Tempat Lahir</td>
-            <td><strong><?= isset($_SESSION['TempatLahir']) ? $_SESSION['TempatLahir'] : "" ?></td>
+            <td><strong><?= $data['TempatLahir'] ?></td>
             <td>Tgl Lahir</td>
-            <td><strong><?= isset($_SESSION['TglLahir']) ? $_SESSION['TglLahir'] : "" ?></td>
+            <td><strong><?= $data['TglLahir'] ?></td>
             <td>NIK</td>
-            <td><strong><?= isset($_SESSION['NIK']) ? $_SESSION['NIK'] : "" ?></td>            </tr>
+            <td><strong><?= $data['NIK'] ?></td>            </tr>
         <tr>
             <td>Warga Negara</td>
-            <td><strong><?= isset($_SESSION['WargaNegara']) ? $_SESSION['WargaNegara'] : "" ?></td>
+            <td><strong><?= $data['WargaNegara'] ?></td>
             <td>Email</td>
-            <td><strong><?= isset($_SESSION['Email']) ? $_SESSION['Email'] : "" ?></td>
+            <td><strong><?= $data['Email'] ?></td>
             <td>No HP</td>
-            <td><strong><?= isset($_SESSION['NoHP']) ? $_SESSION['NoHP'] : "" ?></td>
+            <td><strong><?= $data['NoHP'] ?></td>
         </tr>
         <tr>
             <td>Alamat</td>
-            <td><strong><?= isset($_SESSION['Alamat']) ? $_SESSION['Alamat'] : "" ?></td>
+            <td><strong><?= $data['Alamat'] ?></td>
             <td>Kode Pos</td>
-            <td><strong><?= isset($_SESSION['KodePos']) ? $_SESSION['KodePos'] : "" ?></td>
+            <td><strong><?= $data['KodePos'] ?></td>
             <td>Foto Profil</td>
-            <td rowspan="4"><img src="foto/<?= isset($_SESSION['FotoProfil'])? $_SESSION['FotoProfil'] :"" ?>"></td>
+            <td rowspan="4"><img src="foto/<?= $data['NamaFoto'] ?>"></td>
         </tr>
         <tr>
             <td></td>
